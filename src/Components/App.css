@@ -30,7 +30,7 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(203, 203, 203);
+  background-color: #f4f3ef;
   overflow-x: hidden; /* prevents side gaps scrolling */
 }
 
@@ -48,12 +48,11 @@ body {
   background: black;
 }
 
-.hero-video video {
+.hero-video img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
-  display: block;
+  object-position: center 80%; /* move image up */
 }
 
 .scroll-arrow {
@@ -135,31 +134,52 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.site-wrap h1 {
+  margin-bottom: 0.5rem;
+}
 
 .filter-buttons {
-  display: flex; 
-  gap: 1rem; 
-  justify-content: center; 
-  flex-wrap: wrap;   
-  margin-bottom: 2rem; 
+  margin-top: 0.5rem;
+}
+
+.filter-buttons button {
+  font-family: "Basic";
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.filter-buttons button:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 
 
 .gallery {
   display: grid;
-  gap: 2rem;
-  justify-content: center;
-  grid-template-columns: repeat(2, 1fr);
-  column-count: 3; 
-  column-count: 3; 
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
 }
 
 .gallery img {
-  width: 90%;   
-  height: auto;  
-  object-fit: cover;
-  border-radius: 8px; 
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #e6e6e6;
+}
+
+.gallery img:nth-child(odd) {
+  transform: translateY(10px);
+}
+
+@media (min-width: 900px) {
+  .gallery img:nth-child(3n) {
+    transform: translateY(12px);
+  }
+
+  .gallery img:nth-child(5n) {
+    transform: translateY(-8px);
+  }
 }

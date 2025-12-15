@@ -32,9 +32,11 @@ function App() {
   return (
     <>
     <section className = "hero-video">
-    <video autoPlay loop muted playsInline>
-      <source src="./video/intro.mp4" type="video/mp4" />  
-    </video>
+    <img
+        src="public/images/lookdowncover.jpg"
+        alt="Hero background"
+        className="hero-image"
+      />
 
     <div
      className = "scroll-arrow"

@@ -33,7 +33,7 @@ function App() {
     <>
     <section className = "hero-video">
     <img
-        src="public/images/lookdowncover.jpg"
+        src="/images/lookdowncover.jpg"
         alt="Hero background"
         className="hero-image"
       />

@@ -3,6 +3,7 @@ import "/src/components/App.css";
 import ImageCard from "./ImageCard/ImageCard"; 
 import imageData from "../data/images.json";
 
+
 function shuffleArray(array) {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -33,7 +34,7 @@ function App() {
     <>
     <section className = "hero-video">
     <img
-        src="/images/lookdowncover.jpg"
+        src={`${import.meta.env.BASE_URL}images/lookdowncover.jpg`} 
         alt="Hero background"
         className="hero-image"
       />
